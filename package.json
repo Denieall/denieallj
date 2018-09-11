@@ -1,0 +1,14 @@
+{
+  "name": "portfolio_website",
+  "version": "1.0.0",
+  "description": "Responsive Portfolio Website with SASS",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Denieall J.",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.9.3"
+  }
+}

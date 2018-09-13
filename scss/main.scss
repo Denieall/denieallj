@@ -1,4 +1,5 @@
 @import "config";
+@import "menu";
 
 // Select all the elements
 * {
@@ -48,7 +49,6 @@ header {
   position: fixed; // always want the header to remain top
   z-index: 2;
   width: 100%;
-  display: none;
 }
 
 .text-secondary {

@@ -1,6 +1,84 @@
-$primary-color: #444;
+@import "config";
+
+// Select all the elements
+* {
+  box-sizing: border-box;
+}
 
 body {
+  @include background();
   background: $primary-color;
   color: #fff;
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+// Headings
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+
+  // Any h1, h2, h3 tag that have class of .lg-heading
+  &.lg-heading {
+    font-size: 6rem;
+  }
+
+  // Any h1, h2, h3 tag that have class of .sm-heading
+  &.sm-heading {
+    margin-bottom: 2em;
+    // topBottom, leftRight
+    padding: 0.2rem 1rem;
+
+    // lighten generates a color lighter than the one passed in
+    // rgba is adjusting the transparency
+    background: rgba(lighten($color: $primary-color, $amount: 10), 0.3);
+  }
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header {
+  position: fixed; // always want the header to remain top
+  z-index: 2;
+  width: 100%;
+  display: none;
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+
+main {
+  padding: 4rem;
+  height: 100%;
+
+  // only effect child elements of main tag with the class name .icons
+  .icons {
+    margin-top: 1rem;
+
+    a {
+      padding: 0.4rem;
+
+      &:hover {
+        color: $secondary-color;
+        // Calling mixin/function
+        @include easeOut();
+      }
+    }
+  }
+
+  &#home {
+    overflow: hidden; // do not display scrollbars
+
+    h1 {
+      margin-top: 20vh;
+    }
+  }
 }

@@ -22,6 +22,100 @@
       .menu-btn.close .btn-line:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px); }
 
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  visibility: hidden; }
+  .menu .menu-nav {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 50%;
+    float: right;
+    opacity: 0.9;
+    background: #444;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transform: translate3d(100%, -100%, 0);
+    transition: all 0.9s ease-out; }
+    .menu .menu-nav.show {
+      transform: translate3d(0, 0, 0); }
+    .menu .menu-nav .nav-item {
+      transform: translate3d(600px, 600px, 0);
+      transition: all 0.9s ease-out; }
+      .menu .menu-nav .nav-item.show {
+        transform: translate3d(0, 0, 0); }
+    .menu .menu-nav .nav-link {
+      display: inline-block;
+      position: relative;
+      font-size: 30px;
+      text-transform: uppercase;
+      padding: 1rem 0;
+      font-weight: 300;
+      color: #fff;
+      text-decoration: none;
+      transition: all 0.9s ease-out; }
+      .menu .menu-nav .nav-link:hover {
+        font-size: 35px;
+        color: #2196f3; }
+      .menu .menu-nav .nav-link.current {
+        color: #2196f3;
+        font-size: 35px; }
+    .menu .menu-nav .nav-item:nth-child(1).show {
+      transition-delay: 0.1s; }
+    .menu .menu-nav .nav-item:nth-child(2).show {
+      transition-delay: 0.2s; }
+    .menu .menu-nav .nav-item:nth-child(3).show {
+      transition-delay: 0.3s; }
+    .menu .menu-nav .nav-item:nth-child(4).show {
+      transition-delay: 0.4s; }
+    .menu .menu-nav .nav-item:nth-child(5).show {
+      transition-delay: 0.5s; }
+  .menu .menu-branding {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 50%;
+    float: left;
+    transform: translate3d(-100%, 100%, 0);
+    transition: all 0.9s ease-out; }
+    .menu .menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+    .menu .menu-branding .menu-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #4e4e4e;
+      opacity: 0.9;
+      height: 100vh;
+      width: 100%;
+      z-index: -1; }
+    .menu .menu-branding .potrait {
+      width: 250px;
+      height: 250px;
+      border: 3px solid #2196f3;
+      border-radius: 100%;
+      background: url("../img/profile.jpeg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      transform: translate3d(-600px, -600px, 0);
+      transition-delay: 0.3s; }
+      .menu .menu-branding .potrait.show {
+        transform: translate3d(0, 0, 0);
+        transition: all 0.9s ease-out;
+        transition-delay: 0.5s; }
+  .menu.show {
+    visibility: visible; }
+
 * {
   box-sizing: border-box; }
 

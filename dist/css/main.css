@@ -116,8 +116,111 @@
   .menu.show {
     visibility: visible; }
 
+@media screen and (max-width: 1170px) {
+  main {
+    padding: 0;
+    margin: 0; }
+    main h1.lg-heading,
+    main h2.lg-heading,
+    main h3.lg-heading {
+      font-size: 70px;
+      margin-bottom: 15px; }
+    main h1.sm-heading,
+    main h2.sm-heading,
+    main h3.sm-heading {
+      font-size: 24px;
+      margin-bottom: 30px;
+      padding: 0.2rem 0.2rem;
+      background: rgba(94, 94, 94, 0.3); }
+    main .icons a {
+      margin: 0; }
+      main .icons a:hover {
+        color: #2196f3;
+        transition: all 0.9s ease-out; } }
+
+@media screen and (max-width: 850px) {
+  main {
+    padding: 0;
+    margin: 0; }
+    main h1.lg-heading,
+    main h2.lg-heading,
+    main h3.lg-heading {
+      font-size: 45px;
+      margin-bottom: 15px; }
+    main h1.sm-heading,
+    main h2.sm-heading,
+    main h3.sm-heading {
+      font-size: 18px;
+      margin-bottom: 30px;
+      padding: 0.2rem 0.2rem;
+      background: rgba(94, 94, 94, 0.3); }
+    main .icons a {
+      font-size: 14px;
+      margin: 0; }
+      main .icons a:hover {
+        color: #2196f3;
+        transition: all 0.9s ease-out; } }
+
+@media screen and (max-width: 620px) {
+  .menu-btn {
+    right: 20px;
+    top: 20px; }
+  main {
+    align-items: center;
+    text-align: center; }
+    main h1.lg-heading,
+    main h2.lg-heading,
+    main h3.lg-heading {
+      font-size: 26px;
+      margin-bottom: 15px; }
+    main h1.sm-heading,
+    main h2.sm-heading,
+    main h3.sm-heading {
+      font-size: 18px;
+      margin-bottom: 30px;
+      padding: 0.2rem 1rem;
+      background: rgba(94, 94, 94, 0.3); }
+    main .icons a {
+      justify-content: center;
+      font-size: 14px;
+      margin: 0; }
+      main .icons a:hover {
+        color: #2196f3;
+        transition: all 0.9s ease-out; } }
+
+@media screen and (max-width: 390px) {
+  .menu-btn {
+    right: 20px;
+    top: 20px; }
+  main {
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    text-align: center; }
+    main h1.lg-heading,
+    main h2.lg-heading,
+    main h3.lg-heading {
+      font-size: 18.5px;
+      margin-bottom: 15px; }
+    main h1.sm-heading,
+    main h2.sm-heading,
+    main h3.sm-heading {
+      font-size: 12px;
+      margin-bottom: 30px;
+      padding: 0.2rem 0.2rem;
+      background: rgba(94, 94, 94, 0.3); }
+    main .icons a {
+      justify-content: center;
+      font-size: 11px;
+      margin: 0; }
+      main .icons a:hover {
+        color: #2196f3;
+        transition: all 0.9s ease-out; } }
+
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
 
 body {
   background: #444;
@@ -125,7 +228,8 @@ body {
   height: 100%;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.5; }
+  line-height: 1.5;
+  overflow: hidden; }
   body#bg-img {
     background: url(../img/background3.jpg);
     background-attachment: fixed;
@@ -172,15 +276,18 @@ header {
 
 main {
   padding: 4rem;
-  height: 100%; }
-  main .icons {
-    margin-top: 1rem; }
-    main .icons a {
-      padding: 0.4rem; }
-      main .icons a:hover {
-        color: #2196f3;
-        transition: all 0.9s ease-out; }
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden; }
+  main .icons a {
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+    main .icons a:hover {
+      color: #2196f3;
+      transition: all 0.9s ease-out; }
   main#home {
     overflow: hidden; }
-    main#home h1 {
-      margin-top: 20vh; }

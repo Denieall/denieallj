@@ -1,0 +1,192 @@
+@include mediaLg {
+	main {
+		padding: 0;
+		margin: 0;
+
+		h1,
+		h2,
+		h3 {
+			// Any h1, h2, h3 tag that have class of .lg-heading
+			&.lg-heading {
+				font-size: 70px;
+				margin-bottom: 15px;
+			}
+
+			// Any h1, h2, h3 tag that have class of .sm-heading
+			&.sm-heading {
+				font-size: 24px;
+				margin-bottom: 30px;
+				// topBottom, leftRight
+				padding: 0.2rem 0.2rem;
+
+				// lighten generates a color lighter than the one passed in
+				// rgba is adjusting the transparency
+				background: rgba(
+					lighten($color: $primary-color, $amount: 10),
+					0.3
+				);
+			}
+		}
+
+		.icons {
+			a {
+				margin: 0;
+
+				&:hover {
+					color: $secondary-color;
+					// Calling mixin/function
+					@include easeOut();
+				}
+			}
+		}
+	}
+}
+
+@include mediaMd {
+	main {
+		padding: 0;
+		margin: 0;
+
+		h1,
+		h2,
+		h3 {
+			// Any h1, h2, h3 tag that have class of .lg-heading
+			&.lg-heading {
+				font-size: 45px;
+				margin-bottom: 15px;
+			}
+
+			// Any h1, h2, h3 tag that have class of .sm-heading
+			&.sm-heading {
+				font-size: 18px;
+				margin-bottom: 30px;
+				// topBottom, leftRight
+				padding: 0.2rem 0.2rem;
+
+				// lighten generates a color lighter than the one passed in
+				// rgba is adjusting the transparency
+				background: rgba(
+					lighten($color: $primary-color, $amount: 10),
+					0.3
+				);
+			}
+		}
+
+		.icons {
+			a {
+				font-size: 14px;
+				margin: 0;
+
+				&:hover {
+					color: $secondary-color;
+					// Calling mixin/function
+					@include easeOut();
+				}
+			}
+		}
+	}
+}
+
+@include mediaSm {
+	.menu-btn {
+		right: 20px;
+		top: 20px;
+	}
+
+	main {
+		align-items: center;
+		text-align: center;
+
+		h1,
+		h2,
+		h3 {
+			// Any h1, h2, h3 tag that have class of .lg-heading
+			&.lg-heading {
+				font-size: 26px;
+				margin-bottom: 15px;
+			}
+
+			// Any h1, h2, h3 tag that have class of .sm-heading
+			&.sm-heading {
+				font-size: 18px;
+				margin-bottom: 30px;
+				// topBottom, leftRight
+				padding: 0.2rem 1rem;
+
+				// lighten generates a color lighter than the one passed in
+				// rgba is adjusting the transparency
+				background: rgba(
+					lighten($color: $primary-color, $amount: 10),
+					0.3
+				);
+			}
+		}
+
+		.icons {
+			a {
+				justify-content: center;
+				font-size: 14px;
+				margin: 0;
+
+				&:hover {
+					color: $secondary-color;
+					// Calling mixin/function
+					@include easeOut();
+				}
+			}
+		}
+	}
+}
+
+@include mediaXS {
+	.menu-btn {
+		right: 20px;
+		top: 20px;
+	}
+
+	main {
+		padding: 0;
+		margin: 0;
+		align-items: center;
+		text-align: center;
+
+		h1,
+		h2,
+		h3 {
+			// Any h1, h2, h3 tag that have class of .lg-heading
+			&.lg-heading {
+				font-size: 18.5px;
+				margin-bottom: 15px;
+			}
+
+			// Any h1, h2, h3 tag that have class of .sm-heading
+			&.sm-heading {
+				font-size: 12px;
+				margin-bottom: 30px;
+				// topBottom, leftRight
+				padding: 0.2rem 0.2rem;
+
+				// lighten generates a color lighter than the one passed in
+				// rgba is adjusting the transparency
+				background: rgba(
+					lighten($color: $primary-color, $amount: 10),
+					0.3
+				);
+			}
+		}
+
+		.icons {
+			a {
+				justify-content: center;
+				font-size: 11px;
+				margin: 0;
+
+				&:hover {
+					color: $secondary-color;
+					// Calling mixin/function
+					@include easeOut();
+				}
+			}
+		}
+	}
+}

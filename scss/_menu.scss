@@ -10,7 +10,7 @@
 	.btn-line {
 		height: 3px;
 		width: 28px;
-		background: #fff;
+		background: setTextColor($primary-color);
 		margin: 0 0 5px 0;
 		@include easeOut();
 	}
@@ -49,6 +49,8 @@
 	width: 100%;
 	overflow: hidden;
 	visibility: hidden;
+	margin: 0;
+	padding: 0;
 
 	.menu-nav {
 		display: flex;
@@ -59,7 +61,7 @@
 		width: 50%;
 		float: right;
 		opacity: 0.9;
-		background: $primary-color;
+		background: darken($primary-color, 4);
 		margin: 0;
 		padding: 0;
 		list-style: none;
@@ -86,7 +88,7 @@
 			text-transform: uppercase;
 			padding: 1rem 0;
 			font-weight: 300;
-			color: #fff;
+			color: setTextColor($primary-color);
 			text-decoration: none;
 			@include easeOut();
 
@@ -101,7 +103,7 @@
 			}
 		}
 
-		@for $x from 1 through 5 {
+		@for $x from 1 through 4 {
 			.nav-item:nth-child(#{$x}) {
 				&.show {
 					transition-delay: 0.1s * $x;
@@ -133,7 +135,7 @@
 			opacity: 0.9;
 			height: 100vh;
 			width: 100%;
-			z-index: -1;
+			z-index: 2;
 		}
 
 		.potrait {
@@ -146,6 +148,7 @@
 			background-size: contain;
 			transform: translate3d(-600px, -600px, 0);
 			transition-delay: 0.3s;
+			z-index: 3;
 
 			&.show {
 				transform: translate3d(0, 0, 0);

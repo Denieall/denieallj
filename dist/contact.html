@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Denieall J. Portfolio</title>
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/contact.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
 </head>
 
-<body id="bg-img">
+<body>
     <header>
         <div class="menu-btn">
             <div class="btn-line"></div>
@@ -27,7 +27,7 @@
 
             <ul class="menu-nav">
                 <li class="nav-item">
-                    <a href="index.html" class="nav-link current">Home</a>
+                    <a href="index.html" class="nav-link">Home</a>
                 </li>
 
                 <li class="nav-item">
@@ -39,37 +39,40 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="contact.html" class="nav-link">How To Contact Me</a>
+                    <a href="contact.html" class="nav-link current">How To Contact Me</a>
                 </li>
             </ul>
         </nav>
     </header>
 
-    <div id="particles-js"></div>
-
-    <main id="home">
-        <h1 class="lg-heading">
-            Denieall <span class="text-secondary">Joenethen</span>
+    <main>
+        <h1 id="title" class="lg-heading2">
+            Contact <span class="text-secondary2">Me</span>
         </h1>
 
-        <h2 class="sm-heading">Web Developer, Programmer & Android App Developer</h2>
+        <div id="email" class="anim1">
+            <i id="icon" class="fas fa-envelope fa-2x"></i>
+            <h2 id="label" class="sm-heading2">Email: </h2>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <h2 class="sm-heading2">denieall.joe@gmail.com</h2>
+        </div>
 
-        <div class="icons">
-            <a href="https://pages.github.com/" target="_blank">
-                <i class="fab fa-github fa-2x"></i>
-                <p>&nbsp;&nbsp;&nbsp;Hosted on GitHub Pages</p>
-            </a>
+        <div id="phone" class="anim2">
+            <i id="icon" class="fas fa-phone fa-2x"></i>
+            <h2 id="label" class="sm-heading2">H/P Number: </h2>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <h2 class="sm-heading2">011-37458287</h2>
+        </div>
+
+        <div id="address" class="anim3">
+            <i id="icon" class="fas fa-home fa-2x"></i>
+            <h2 id="label" class="sm-heading2">Address: </h2>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <h2 class="sm-heading2">No. 15, Lorong Bukit Setongkol 61, 25200, Kuantan, Pahang</h2>
         </div>
     </main>
 
-    <script src="js/particles.js"></script>
     <script src="js/main.js"></script>
-    <script>
-        // Loading Particle.js
-        particlesJS.load('particles-js', 'js/particles.json', () => {
-            //console.log("json file loaded successfully");
-        });
-    </script>
 </body>
 
 </html>

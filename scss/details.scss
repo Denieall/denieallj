@@ -1,0 +1,370 @@
+@import "config";
+@import "menu";
+@import "mobile";
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: lighten($primary-color, 10);
+	color: setTextColor($primary-color);
+	margin: 0;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+	margin: 0;
+	font-weight: 400;
+
+	// Any h1, h2, h3 tag that have class of .lg-heading
+	&.lg-heading2 {
+		font-size: 5rem;
+	}
+
+	// Any h1, h2, h3 tag that have class of .sm-heading
+	&.sm-heading2 {
+		font-size: 3rem;
+	}
+}
+
+a {
+	color: setTextColor($primary-color);
+	text-decoration: none;
+}
+
+header {
+	position: fixed; // always want the header to remain top
+	z-index: 2;
+	width: 100%;
+}
+
+.text-secondary2 {
+	color: $secondary-color;
+}
+
+footer {
+	padding: 50px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+main {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	margin-top: 70px;
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+#bio-container {
+	margin: 80px 0;
+	display: grid;
+	align-items: center;
+	grid-template-areas: "profileImg profileImg bio bio bio";
+	grid-column-gap: 100px;
+
+	#profileImg {
+		grid-area: profileImg;
+
+		img {
+			width: 300px;
+			height: 300px;
+			border: 5px solid $secondary-color;
+			border-radius: 250px;
+		}
+	}
+
+	#bio {
+		grid-area: bio;
+		font-size: 20px;
+
+		p {
+			text-align: justify;
+		}
+	}
+}
+
+#educationItem {
+	margin-bottom: 80px;
+	display: grid;
+	grid-template-areas: "education1 education2";
+	grid-column-gap: 100px;
+	text-align: center;
+	font-size: 20px;
+
+	#education1 {
+		grid-area: education1;
+
+		margin: 0;
+		padding: 0;
+		width: 100%;
+
+		#course {
+			background: $secondary-color;
+			border: 3px solid $secondary-color;
+			border-top-right-radius: 20px;
+			border-top-left-radius: 20px;
+			color: #fff;
+			width: 100%;
+			padding: 10px;
+		}
+
+		#course-details {
+			border-bottom: 3px solid $secondary-color;
+			border-left: 3px solid $secondary-color;
+			border-right: 3px solid $secondary-color;
+			border-bottom-right-radius: 20px;
+			border-bottom-left-radius: 20px;
+			color: #fff;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 250px;
+			padding: 5px;
+			line-height: 50px;
+		}
+	}
+
+	#education2 {
+		grid-area: education2;
+
+		margin: 0;
+		padding: 0;
+		width: 100%;
+
+		#course {
+			background: $secondary-color;
+			border: 3px solid $secondary-color;
+			border-top-right-radius: 20px;
+			border-top-left-radius: 20px;
+			color: #fff;
+			width: 100%;
+			padding: 10px;
+		}
+
+		#course-details {
+			border-bottom: 3px solid $secondary-color;
+			border-left: 3px solid $secondary-color;
+			border-right: 3px solid $secondary-color;
+			border-bottom-right-radius: 20px;
+			border-bottom-left-radius: 20px;
+			color: #fff;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 250px;
+			width: 100%;
+			padding: 5px;
+			line-height: 50px;
+		}
+	}
+}
+
+.skills {
+	display: grid;
+	grid-gap: 50px;
+	grid-template-columns: repeat(6, 1fr);
+	margin-top: 20px;
+	margin-bottom: 80px;
+
+	div {
+		background: lighten($primary-color, 9);
+		text-align: center;
+
+		figure {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: 15px 0;
+
+			img {
+				width: 100px;
+				height: 100px;
+			}
+		}
+
+		&:hover {
+			transform: scale(0.8);
+			background-color: $secondary-color;
+			@include easeOut();
+		}
+	}
+}
+
+@media screen and (max-width: 1066px) {
+	.skills {
+		grid-template-columns: repeat(5, 1fr);
+	}
+}
+
+@media screen and (max-width: 930px) {
+	main {
+		text-align: center;
+	}
+
+	#bio-container {
+		grid-template-areas:
+			"profileImg"
+			"bio";
+
+		#profileImg {
+			margin-bottom: 80px;
+		}
+
+		#bio {
+			font-size: 20px;
+		}
+	}
+
+	#educationItem {
+		grid-template-areas:
+			"education1"
+			"education2";
+		font-size: 20px;
+
+		#education1 {
+			margin-top: 10px;
+
+			#course-details {
+				height: 320px;
+				line-height: 30px;
+			}
+		}
+
+		#education2 {
+			margin-top: 40px;
+
+			#course-details {
+				height: 320px;
+				line-height: 30px;
+			}
+		}
+	}
+
+	.skills {
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 30px;
+	}
+}
+
+@media screen and (max-width: 599px) {
+	.skills {
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 10px;
+
+		div {
+			figure {
+				img {
+					width: 60px;
+					height: 60px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 531px) {
+	main {
+		text-align: center;
+	}
+
+	#bio-container {
+		grid-template-areas:
+			"profileImg"
+			"bio";
+
+		#profileImg {
+			margin-bottom: 80px;
+
+			img {
+				width: 200px;
+				height: 200px;
+				border: 5px solid $secondary-color;
+				border-radius: 200px;
+			}
+		}
+
+		#bio {
+			font-size: 18px;
+
+			p {
+				text-align: left;
+			}
+		}
+	}
+
+	#educationItem {
+		grid-template-areas:
+			"education1"
+			"education2";
+		font-size: 18px;
+
+		#education1 {
+			margin-top: 10px;
+
+			#course-details {
+				height: 320px;
+				line-height: 30px;
+			}
+		}
+
+		#education2 {
+			margin-top: 40px;
+
+			#course-details {
+				height: 320px;
+				line-height: 30px;
+			}
+		}
+	}
+
+	h1,
+	h2,
+	h3 {
+		margin: 0;
+		font-weight: 400;
+
+		// Any h1, h2, h3 tag that have class of .lg-heading
+		&.lg-heading2 {
+			font-size: 2.8rem;
+		}
+
+		// Any h1, h2, h3 tag that have class of .sm-heading
+		&.sm-heading2 {
+			font-size: 2.5rem;
+		}
+	}
+
+	footer {
+		font-size: 13.5px;
+	}
+}
+
+@media screen and (max-width: 439px) {
+	.skills {
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 5px;
+
+		div {
+			figure {
+				img {
+					width: 40px;
+					height: 40px;
+				}
+			}
+		}
+	}
+}

@@ -1,3 +1,9 @@
+@include mediaHeight {
+	body: {
+		overflow: hidden;
+	}
+}
+
 @include mediaLg {
 	main {
 		padding: 0;
@@ -85,6 +91,30 @@
 			}
 		}
 	}
+
+	.menu {
+		overflow: auto;
+
+		.menu-nav {
+			float: none;
+			height: 700px;
+			width: 100%;
+
+			.nav-link {
+				margin: 10px 0;
+			}
+		}
+
+		.menu-branding {
+			float: none;
+			height: 400px;
+			width: 100%;
+
+			.menu-overlay {
+				height: 400px;
+			}
+		}
+	}
 }
 
 @include mediaSm {
@@ -133,6 +163,46 @@
 					// Calling mixin/function
 					@include easeOut();
 				}
+			}
+		}
+	}
+
+	.menu {
+		overflow: auto;
+
+		.menu-nav {
+			float: none;
+			height: 600px;
+			width: 100%;
+
+			.nav-link {
+				font-size: 23px;
+				padding: 1rem 0;
+				font-weight: 300;
+				margin: 10px 0;
+
+				&:hover {
+					font-size: 27px;
+				}
+
+				&.current {
+					font-size: 27px;
+				}
+			}
+		}
+
+		.menu-branding {
+			float: none;
+			height: 400px;
+			width: 100%;
+
+			.potrait {
+				width: 200px;
+				height: 200px;
+			}
+
+			.menu-overlay {
+				height: 400px;
 			}
 		}
 	}
@@ -186,6 +256,46 @@
 					// Calling mixin/function
 					@include easeOut();
 				}
+			}
+		}
+	}
+
+	.menu {
+		overflow: auto;
+
+		.menu-nav {
+			float: none;
+			height: 600px;
+			width: 100%;
+
+			.nav-link {
+				font-size: 19px;
+				margin: 10px 0;
+				padding: 1rem 0;
+				font-weight: 300;
+
+				&:hover {
+					font-size: 22px;
+				}
+
+				&.current {
+					font-size: 22px;
+				}
+			}
+		}
+
+		.menu-branding {
+			float: none;
+			height: 400px;
+			width: 100%;
+
+			.potrait {
+				width: 150px;
+				height: 150px;
+			}
+
+			.menu-overlay {
+				height: 400px;
 			}
 		}
 	}

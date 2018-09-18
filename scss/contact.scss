@@ -1,6 +1,5 @@
 @import "config";
 @import "nav";
-@import "mobile";
 
 // animation
 @keyframes contactAnimation1 {
@@ -70,9 +69,12 @@ a {
 }
 
 header {
-	position: fixed; // always want the header to remain top
-	z-index: 2;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
 	width: 100%;
+	z-index: 2;
 }
 
 .text-secondary2 {

@@ -78,8 +78,6 @@
       transition-delay: 0.3s; }
     .menu .menu-nav .nav-item:nth-child(4).show {
       transition-delay: 0.4s; }
-    .menu .menu-nav .nav-item:nth-child(5).show {
-      transition-delay: 0.5s; }
   .menu .menu-branding {
     display: flex;
     flex-flow: column wrap;
@@ -119,9 +117,6 @@
   .menu.show {
     visibility: visible; }
 
-@media screen and (max-height: 130px) and (max-width: 400px) {
-  body-overflow: hidden; }
-
 @media screen and (max-width: 1170px) {
   main {
     padding: 0;
@@ -142,7 +137,19 @@
       margin: 0; }
       main .icons a:hover {
         color: #2196f3;
-        transition: all 0.6s ease-out; } }
+        transition: all 0.6s ease-out; }
+    main .menu .menu-nav {
+      float: none;
+      height: 400px;
+      width: 100%; }
+      main .menu .menu-nav .nav-link {
+        margin: 10px 0; }
+    main .menu .menu-branding {
+      float: none;
+      display: none;
+      height: 0; }
+      main .menu .menu-branding .potrait {
+        display: none; } }
 
 @media screen and (max-width: 850px) {
   main {
@@ -166,20 +173,18 @@
       main .icons a:hover {
         color: #2196f3;
         transition: all 0.6s ease-out; }
-  .menu {
-    overflow: auto; }
-    .menu .menu-nav {
-      float: none;
-      height: 700px;
-      width: 100%; }
-      .menu .menu-nav .nav-link {
-        margin: 10px 0; }
-    .menu .menu-branding {
-      float: none;
-      height: 400px;
-      width: 100%; }
-      .menu .menu-branding .menu-overlay {
-        height: 400px; } }
+  .menu .menu-nav {
+    float: none;
+    height: 400px;
+    width: 100%; }
+    .menu .menu-nav .nav-link {
+      margin: 10px 0; }
+  .menu .menu-branding {
+    float: none;
+    display: none;
+    height: 0; }
+    .menu .menu-branding .potrait {
+      display: none; } }
 
 @media screen and (max-width: 620px) {
   .menu-btn {
@@ -207,32 +212,30 @@
       main .icons a:hover {
         color: #2196f3;
         transition: all 0.6s ease-out; }
-  .menu {
-    overflow: auto; }
-    .menu .menu-nav {
-      float: none;
-      height: 600px;
-      width: 100%; }
-      .menu .menu-nav .nav-link {
-        font-size: 23px;
-        padding: 1rem 0;
-        font-weight: 300;
-        margin: 10px 0; }
-        .menu .menu-nav .nav-link:hover {
-          font-size: 27px; }
-        .menu .menu-nav .nav-link.current {
-          font-size: 27px; }
-    .menu .menu-branding {
-      float: none;
-      height: 400px;
-      width: 100%; }
-      .menu .menu-branding .potrait {
-        width: 200px;
-        height: 200px; }
-      .menu .menu-branding .menu-overlay {
-        height: 400px; } }
+  .menu .menu-nav {
+    float: none;
+    height: 400px;
+    width: 100%; }
+    .menu .menu-nav .nav-link {
+      font-size: 23px;
+      padding: 1rem 0;
+      font-weight: 300;
+      margin: 10px 0; }
+      .menu .menu-nav .nav-link:hover {
+        font-size: 27px; }
+      .menu .menu-nav .nav-link.current {
+        font-size: 27px; }
+  .menu .menu-branding {
+    float: none;
+    height: 0;
+    display: none; } }
 
 @media screen and (max-width: 390px) {
+  #particles-js {
+    display: none; }
+  body {
+    background: none;
+    background-color: gray; }
   .menu-btn {
     right: 20px;
     top: 20px; }
@@ -260,30 +263,23 @@
       main .icons a:hover {
         color: #2196f3;
         transition: all 0.6s ease-out; }
-  .menu {
-    overflow: auto; }
-    .menu .menu-nav {
-      float: none;
-      height: 600px;
-      width: 100%; }
-      .menu .menu-nav .nav-link {
-        font-size: 19px;
-        margin: 10px 0;
-        padding: 1rem 0;
-        font-weight: 300; }
-        .menu .menu-nav .nav-link:hover {
-          font-size: 22px; }
-        .menu .menu-nav .nav-link.current {
-          font-size: 22px; }
-    .menu .menu-branding {
-      float: none;
-      height: 400px;
-      width: 100%; }
-      .menu .menu-branding .potrait {
-        width: 150px;
-        height: 150px; }
-      .menu .menu-branding .menu-overlay {
-        height: 400px; } }
+  .menu .menu-nav {
+    float: none;
+    height: 400px;
+    width: 100%; }
+    .menu .menu-nav .nav-link {
+      font-size: 19px;
+      margin: 10px 0;
+      padding: 1rem 0;
+      font-weight: 300; }
+      .menu .menu-nav .nav-link:hover {
+        font-size: 22px; }
+      .menu .menu-nav .nav-link.current {
+        font-size: 22px; }
+  .menu .menu-branding .menu-branding {
+    float: none;
+    height: 0;
+    display: none; } }
 
 * {
   box-sizing: border-box;
@@ -301,8 +297,7 @@ body {
     background: url(../img/background3.jpg);
     background-attachment: fixed;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center; }
+    background-repeat: no-repeat; }
     body#bg-img:after {
       content: "";
       position: absolute;
@@ -347,7 +342,7 @@ header {
   top: 0;
   left: 0;
   z-index: -1;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   overflow: hidden;
   margin: 0;

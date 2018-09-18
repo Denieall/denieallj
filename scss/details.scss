@@ -1,5 +1,5 @@
 @import "config";
-@import "menu";
+@import "nav";
 @import "mobile";
 
 * {
@@ -261,6 +261,11 @@ main {
 }
 
 @media screen and (max-width: 599px) {
+	main {
+		margin-left: 55px;
+		margin-right: 55px;
+	}
+
 	.skills {
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 10px;
@@ -279,6 +284,8 @@ main {
 @media screen and (max-width: 531px) {
 	main {
 		text-align: center;
+		margin-left: 55px;
+		margin-right: 55px;
 	}
 
 	#bio-container {
@@ -354,6 +361,16 @@ main {
 }
 
 @media screen and (max-width: 439px) {
+	main {
+		text-align: center;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	header {
+		position: absolute;
+	}
+
 	.skills {
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 5px;

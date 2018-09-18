@@ -6,45 +6,12 @@
 	padding: 0;
 }
 
-// Dont' use other than html because it will give problem on mobile -- body will giv half image in mobile
-html {
-	position: absolute;
-	top: 0;
-	left: 0;
-	background: url(../img/background3.jpg);
-	background-attachment: fixed;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	height: 100%;
-	width: 100%;
-}
-
 body {
+	background: lighten($primary-color, 10);
 	color: setTextColor($primary-color);
+	margin: 0;
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	line-height: 1.5;
-}
-
-#overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	background-color: rgba($primary-color, 0.6);
-	z-index: 0;
-	overflow: hidden;
-}
-
-#particles-js {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	z-index: -1;
-	overflow: hidden;
 }
 
 header {
@@ -53,50 +20,22 @@ header {
 	left: 0;
 	height: 100%;
 	width: 100%;
-	z-index: 2;
 }
 
 main {
-	margin-left: 50px;
 	position: absolute;
 	top: 0;
 	left: 0;
 	height: 100%;
+	width: 100%;
 	z-index: 1;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 	overflow: hidden;
-
-	.icons {
-		a {
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-
-			&:link {
-				/* Essentially means a[href], or that the link actually goes somewhere */
-				color: inherit;
-			}
-
-			&:visited {
-				color: inherit;
-			}
-
-			&:hover {
-				color: $secondary-color;
-				// Calling mixin/function
-				@include easeOut();
-			}
-
-			&:active {
-				color: inherit;
-			}
-		}
-	}
 }
 
-// Headings
 h1,
 h2,
 h3 {
@@ -105,7 +44,7 @@ h3 {
 
 	// Any h1, h2, h3 tag that have class of .lg-heading
 	&.lg-heading {
-		font-size: 6rem;
+		font-size: 5rem;
 	}
 
 	// Any h1, h2, h3 tag that have class of .sm-heading
@@ -120,11 +59,6 @@ h3 {
 		// rgba is adjusting the transparency
 		background: rgba(lighten($color: $primary-color, $amount: 10), 0.4);
 	}
-}
-
-a {
-	font-size: 1.1em;
-	text-decoration: none;
 }
 
 .text-secondary {
@@ -158,20 +92,9 @@ a {
 			background: rgba(lighten($color: $primary-color, $amount: 10), 0.4);
 		}
 	}
-
-	a {
-		font-size: 1.1em;
-		text-decoration: none;
-	}
 }
 
 @media screen and (max-width: 700px) {
-	main {
-		margin: 0;
-		width: 100%;
-		align-items: center;
-	}
-
 	// Headings
 	h1,
 	h2,
@@ -188,9 +111,5 @@ a {
 			text-align: center;
 			margin-bottom: 1em;
 		}
-	}
-
-	a {
-		font-size: 0.9em;
 	}
 }

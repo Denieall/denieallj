@@ -153,75 +153,32 @@
   margin: 0;
   padding: 0; }
 
-html {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: url(../img/background3.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100%;
-  width: 100%; }
-
 body {
+  background: #1a1a1a;
   color: #fff;
+  margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
-
-#overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 0;
-  overflow: hidden; }
-
-#particles-js {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  overflow: hidden; }
 
 header {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
-  width: 100%;
-  z-index: 2; }
+  width: 100%; }
 
 main {
-  margin-left: 50px;
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
+  width: 100%;
   z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   overflow: hidden; }
-  main .icons a {
-    display: flex;
-    flex-direction: row;
-    align-items: center; }
-    main .icons a:link {
-      /* Essentially means a[href], or that the link actually goes somewhere */
-      color: inherit; }
-    main .icons a:visited {
-      color: inherit; }
-    main .icons a:hover {
-      color: #2196f3;
-      transition: all 0.6s ease-out; }
-    main .icons a:active {
-      color: inherit; }
 
 h1,
 h2,
@@ -231,7 +188,7 @@ h3 {
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-size: 6rem; }
+    font-size: 5rem; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
@@ -239,10 +196,6 @@ h3 {
     margin-bottom: 2em;
     padding: 0.2rem 1rem;
     background: rgba(26, 26, 26, 0.4); }
-
-a {
-  font-size: 1.1em;
-  text-decoration: none; }
 
 .text-secondary {
   color: #2196f3; }
@@ -264,16 +217,9 @@ a {
       font-size: 1.3rem;
       margin-bottom: 1em;
       padding: 0.2rem 1rem;
-      background: rgba(26, 26, 26, 0.4); }
-  a {
-    font-size: 1.1em;
-    text-decoration: none; } }
+      background: rgba(26, 26, 26, 0.4); } }
 
 @media screen and (max-width: 700px) {
-  main {
-    margin: 0;
-    width: 100%;
-    align-items: center; }
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
@@ -284,6 +230,4 @@ a {
   h3.sm-heading {
     font-size: 0.9rem;
     text-align: center;
-    margin-bottom: 1em; }
-  a {
-    font-size: 0.9em; } }
+    margin-bottom: 1em; } }

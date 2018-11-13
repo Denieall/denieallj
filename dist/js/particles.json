@@ -14,11 +14,11 @@
         },
         "line-linked": {
             "enabled": true,
-            "distance": 50
+            "distance": 70
         },
         "move": {
             "enabled": true,
-            "speed": 0.5
+            "speed": 0.6
         }
     }
 }

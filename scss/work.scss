@@ -12,6 +12,7 @@ body {
 	margin: 0;
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	line-height: 1.5;
+	width: 100%;
 }
 
 header {
@@ -22,18 +23,22 @@ header {
 	width: 100%;
 }
 
+footer {
+	padding: 50px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
 main {
-	position: absolute;
+	position: relative;
 	top: 0;
 	left: 0;
 	height: 100%;
-	width: 100%;
-	z-index: 1;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	overflow: hidden;
+	margin-top: 70px;
+	margin-left: 200px;
+	margin-right: 200px;
+	z-index: 2;
 }
 
 h1,
@@ -49,11 +54,7 @@ h3 {
 
 	// Any h1, h2, h3 tag that have class of .sm-heading
 	&.sm-heading {
-		font-size: 1.5rem;
-
-		margin-bottom: 2em;
-		// topBottom, leftRight
-		padding: 0.2rem 1rem;
+		font-size: 2rem;
 
 		// lighten generates a color lighter than the one passed in
 		// rgba is adjusting the transparency
@@ -65,7 +66,88 @@ h3 {
 	color: $secondary-color;
 }
 
-@media screen and (max-width: 1000px) {
+.project-container {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-areas: 
+    'title title title title title' 
+	'img img desc desc desc'
+}
+
+.project-container2 {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-areas: 
+    'title title title title title' 
+	'desc desc desc img img'
+}
+
+.project-title {
+	grid-area: title;
+
+	hr {
+		margin-top: 2px;
+		padding: 0.6px;
+		background-color: white;
+		border-color: white;
+	}
+}
+
+.project-image {
+	grid-area: img;
+	height: 290px;
+	width: 510px;
+	align-self: center;
+}
+
+.project-desc {
+	grid-area: desc;
+	align-self: center;
+	font-size: 1.2em;
+	text-align: justify;
+}
+
+.project-link {
+	color: $secondary-color;
+	text-decoration: none;
+}
+
+@media screen and (max-width: 1356px) {
+
+	main {
+		margin-left: 60px;
+		margin-right: 60px;
+	}
+
+	.project-container {
+		display: grid;
+		grid-gap: 10px;
+		grid-template-areas: 
+		'title' 
+		'img'
+		'desc';
+	}
+
+	.project-container2 {
+		display: grid;
+		grid-gap: 10px;
+		grid-template-areas: 
+		'title' 
+		'img'
+		'desc';
+	}
+
+	.project-image {
+		grid-area: img;
+		justify-self: center;
+		height: 290px;
+		width: 510px;
+	}
+
+	.project-desc {
+		font-size: 1.1em;
+	}
+
 	// Headings
 	h1,
 	h2,
@@ -76,16 +158,11 @@ h3 {
 		// Any h1, h2, h3 tag that have class of .lg-heading
 		&.lg-heading {
 			font-size: 3rem;
-			margin-bottom: 0.4em;
 		}
 
 		// Any h1, h2, h3 tag that have class of .sm-heading
 		&.sm-heading {
-			font-size: 1.3rem;
-
-			margin-bottom: 1em;
-			// topBottom, leftRight
-			padding: 0.2rem 1rem;
+			font-size: 1.6rem;
 
 			// lighten generates a color lighter than the one passed in
 			// rgba is adjusting the transparency
@@ -95,6 +172,41 @@ h3 {
 }
 
 @media screen and (max-width: 700px) {
+
+	main {
+		text-align: center;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	.project-container {
+		display: grid;
+		grid-gap: 10px;
+		grid-template-areas: 
+		'title' 
+		'img'
+		'desc';
+	}
+
+	.project-container2 {
+		display: grid;
+		grid-gap: 10px;
+		grid-template-areas: 
+		'title' 
+		'img'
+		'desc';
+	}
+
+	.project-image {
+		grid-area: img;
+		height: 290px;
+		width: 100%;
+	}
+
+	.project-desc {
+		font-size: 1em;
+	}
+	
 	// Headings
 	h1,
 	h2,
@@ -107,9 +219,11 @@ h3 {
 
 		// Any h1, h2, h3 tag that have class of .sm-heading
 		&.sm-heading {
-			font-size: 0.9rem;
-			text-align: center;
-			margin-bottom: 1em;
+			font-size: 1.2rem;
 		}
+	}
+
+	footer {
+		font-size: 13.5px;
 	}
 }
